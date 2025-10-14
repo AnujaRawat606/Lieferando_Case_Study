@@ -8,5 +8,5 @@ SELECT
   round((sum(orders) / sum(users)), 2) as orders_per_user,
   round((sum(orders) / sum(sessions)), 2) as conversion_ratio
 FROM default.lieferando_traffic
-GROUP BY ALL
+GROUP BY YEAR, ISOWEEK
 ORDER BY year, isoweek
